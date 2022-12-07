@@ -161,7 +161,7 @@ ul.featured-cabins li {
 .cabin-desc,
 ul.features li p,
 .left p {
-  line-height: 1.9em;
+  line-height: 1.6em;
   font-size: 0.8em;
   margin-bottom: 2em;
 }
@@ -267,7 +267,7 @@ p.test-auth {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    grid-gap: 3em;
+    grid-gap: 2.5em;
   }
 }
 
