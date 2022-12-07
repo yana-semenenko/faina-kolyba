@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #b53209;
+  --body-txt: #180b04;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap");
 
 html,
@@ -28,9 +33,10 @@ img {
 .brand {
   display: flex;
   align-items: center;
+  gap: 0.5em;
 }
 .logo {
-  color: black;
+  color: var(--body-txt);
   font-weight: bold;
   font-size: 1.3em;
 }
@@ -40,7 +46,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background: #eaf2e4;
-  /* padding: 0.5em; */
+  padding: 1em;
 }
 
 .menu {
@@ -54,23 +60,27 @@ nav ul {
   width: 100%;
   top: 0;
   left: 0;
-  background: #72a84a;
+  background: #eaf2e4;
   height: 100vh;
   padding-top: 5em;
   z-index: 1;
 }
 
 nav ul li a {
-  color: black;
+  color: var(--body-txt);
   font-size: 1.5em;
   font-weight: bold;
-  padding: 1em;
+  padding: 0.9em;
   display: block;
 }
 
+ul.nav .res a {
+  color: var(--primary-color);
+}
+
 .exit a {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   position: absolute;
   top: 0;
   right: 0;
@@ -109,7 +119,7 @@ h1 span {
 .cta {
   display: inline-block;
   padding: 1em;
-  background: #72a84a;
+  background: var(--primary-color);
   font-weight: bold;
   color: white;
   margin-bottom: 3em;
@@ -167,7 +177,7 @@ ul.features li p,
 }
 
 .feature-container {
-  background: #1a1a1a;
+  background: var(--body-txt);
   color: white;
 }
 
@@ -233,14 +243,19 @@ p.test-auth {
   opacity: 0.1;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 576px) {
+  ul.featured-cabins {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 3em;
+  }
+}
+
+@media (min-width: 768px) {
   .menu,
   .exit {
     display: none;
-  }
-
-  header {
-    padding: 1em;
   }
 
   ul.nav {
@@ -262,7 +277,7 @@ p.test-auth {
   }
 
   ul.nav li:last-child a {
-    margin-left: 2em;
+    margin-left: 2.5em;
     /* padding-right: 0; */
   }
 
@@ -271,23 +286,13 @@ p.test-auth {
   }
 
   ul.nav .res a {
-    color: #a34a1d;
-    padding: 1em 1.5em;
-    border: 1px solid #a34a1d;
+    color: var(--primary-color);
+    /* padding: 1em 1.5em; */
+    border: 0.8px solid var(--primary-color);
     text-align: center;
     border-radius: 2em;
-    /* font-weight: bold; */
   }
 
-  ul.featured-cabins {
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 3em;
-  }
-}
-
-@media (min-width: 650px) {
   ul.features {
     width: 90%;
     display: grid;
@@ -296,7 +301,13 @@ p.test-auth {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 992px) {
+  header {
+    padding: 1em 4em;
+    /* margin: 0 4em; */
+    /* opacity: 0.75;
+    backdrop-filter: blur(100px); */
+  }
   .wrapper {
     text-align: left;
   }
@@ -380,5 +391,14 @@ p.test-auth {
   ul.features li p,
   .left p {
     font-size: 0.9em;
+  }
+}
+
+@media (min-width: 1400px) {
+  header {
+    padding: 1em 8em;
+  }
+  .hero {
+    padding: 8em 8em;
   }
 }
